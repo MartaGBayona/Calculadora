@@ -16,7 +16,21 @@ const operar = (arg1, arg2, oper) => {
     let res = eval (`${arg1} ${oper} ${arg2}`);
     pantalla.innerHTML = res //permite acceder al contenido HTML. Accede al contenido de la pantalla y lo puede modificar
     operando1 = res
+    ajustarTamañoFuente();
 };
+
+//función para ajustar el tamaño de la fuente
+
+const ajustarTamañoFuente = () => {
+    let longitud = pantalla.innerHTML.length;
+    if (longitud > 15) {
+        pantalla.style.fontSize = "1.5em";
+    } else if (longitud > 10) {
+        pantalla.style.fontSize = "2em";
+    } else {
+        pantalla.style.fontSize = "3em";
+    }
+}
 
 // La siguiente función introduce el método .map() en el array de botones para agregar un event listener a cada botón.
 
@@ -28,6 +42,7 @@ arrayBotones.map((item) => {
             } else {
                 pantalla.innerHTML += e.target.innerHTML;
             }
+            ajustarTamañoFuente();
 
             if(operador === "") {
                 operando1 = pantalla.innerHTML
@@ -49,6 +64,7 @@ arrayBotones.map((item) => {
                     operando1 = 0;
                     operando2 = 0;
                     operador = "";
+                    ajustarTamañoFuente();
                     break;
 
                 default:
