@@ -68,7 +68,7 @@ body {
     margin: auto;
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    background-color: #A3C4BC;
+    background: rgba(255, 255, 255, 0.30);
 
     display: flex;
     justify-content: center;
@@ -78,6 +78,16 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 0.5em;
     transition: 0.2s;
+}
+
+
+.boton.operador {
+    background-color: #A3C4BC; 
+    color: white; 
+}
+
+.boton.operador:hover {
+    background-color: #a4e6d5; 
 }
 
 
