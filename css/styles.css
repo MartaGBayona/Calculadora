@@ -31,8 +31,8 @@ body {
 #pantalla {
     height: 4.7rem;
     width: 27rem;
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px); /* genera efecto de desenfoque detraás del elemento */
+    -webkit-backdrop-filter: blur(5.5px); /* garantiza que el backdrop funcione en todos los navegadores */
     background: rgba(255, 255, 255, 0.75);
     color: black;
     margin: 0.5em;
